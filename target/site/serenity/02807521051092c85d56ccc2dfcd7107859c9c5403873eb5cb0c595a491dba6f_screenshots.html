@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">pruebaSophos</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="5ce707a084d09f1cd689c1881782a35a94691b3b78f163b36b295974441785f5.html">Juan Camilo Desea Automatizar La Prueba Tecnica De Sophos</a></span>
+                > <span class="truncate-60"><a
+                    href="02807521051092c85d56ccc2dfcd7107859c9c5403873eb5cb0c595a491dba6f.html">Automatizar el escenario propuesto para la prueba tecnica </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 20-10-2022 11:52</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Juan Camilo Desea Automatizar La Prueba Tecnica De Sophos</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="15caefeb60efe70219dd1e52ecafcb970f39bf4c99fc84be0cc9eedf3611b083.html">Escenario Uno
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="fad9aa86760a5ee6cecaf57b5bc8f97db86ada8b7db9fc1e4ab1d93e00a17738.html">Prueba Tecnica
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Automatizar el escenario propuesto para la prueba tecnica
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Juan Camilo ingresa sus credenciales<br><table class='embedded'><thead><th>user</th><th>password</th></thead><tbody><tr><td>&lt;user&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>When da click en el multiplo de seis y seleccionando la respuesta<br><table class='embedded'><tbody><tr><td>respuesta</td></tr><tr><td>&lt;respuesta&gt;</td></tr></tbody></table><br>When accede al ciclo dos ingresando la fecha<br><table class='embedded'><tbody><tr><td>fecha</td></tr><tr><td>&lt;fecha&gt;</td></tr></tbody></table><br>When inicia el ciclo tres ingresando las respuestas<br><table class='embedded'><thead><th>letra</th><th>numeroRespuesta</th></thead><tbody><tr><td>&lt;letra&gt;</td><td>&lt;numeroRespuesta&gt;</td></tr></tbody></table><br>When inicia el ciclo cuadro ingresando las respuestas<br><table class='embedded'><thead><th>letraZ</th><th>numeroRespuestaDos</th></thead><tbody><tr><td>&lt;letraZ&gt;</td><td>&lt;numeroRespuestaDos&gt;</td></tr></tbody></table><br>When inicia el cinco cuadro ingresando las respuestas<br><table class='embedded'><thead><th>selectCicloCinco</th><th>numeroSecuencia</th></thead><tbody><tr><td>&lt;selectCicloCinco&gt;</td><td>&lt;numeroSecuencia&gt;</td></tr></tbody></table><br>When inicia el ciclo seis ingresando las respuestas<br><table class='embedded'><tbody><tr><td>fecha</td></tr><tr><td>&lt;fecha&gt;</td></tr></tbody></table><br>When ingresa la informacion en el ciclo siete<br><table class='embedded'><tbody><tr><td>fecha</td></tr><tr><td>&lt;fecha&gt;</td></tr></tbody></table><br>When ingresa la letra y la respuesta correspondiente al ciclo ocho<br><table class='embedded'><tbody><tr><td>letraM</td></tr><tr><td>&lt;letraM&gt;</td></tr></tbody></table><br>When responde los retos del ciclo nueve<br><table class='embedded'><tbody><tr><td>fecha</td></tr><tr><td>&lt;fecha&gt;</td></tr></tbody></table><br>When ingresa la letra en el ciclo diez<br><table class='embedded'><tbody><tr><td>letraV</td></tr><tr><td>&lt;letraV&gt;</td></tr></tbody></table><br>Then Visualiza el mensaje de Felicidades, has terminado la prueba exitosamente</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" 1: Automatizar el escenario propuesto para la prueba tecnica ({user=471002, password=10df2f32286b7120MS00LTIwMDE3NA==30e0c83e6c29f1c3, respuesta=-1301, fecha=12102021, letra=r, numeroRespuesta=17, letraZ=Z, numeroRespuestaDos=14, selectCicloCinco=-61198, numeroSecuencia=9, letraM=M, letraV=V})" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Given Juan Camilo ha ingresado al link de la prueba tecnica" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Juan camilo url prueba" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Juan Camilo opens the browser at https://tasks.evalartapp.com/automatization/" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Juan camilo url prueba (completed)" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Given Juan Camilo ha ingresado al link de la prueba tecnica (completed)" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Given Juan Camilo ingresa sus credenciales
+| user | password |
+| 471002 | 10df2f32286b7120MS00LTIwMDE3NA==30e0c83e6c29f1c3 |" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Juan camilo ingresar credenciales prueba sophos" width="1350"/>
+                <img src="b1cc79137fda6329c6a48fa53eddd8b6ad9233bcf7a19a5e5dba16ed2b9f28cc.png" title=" Juan Camilo enters '471002' into the element" width="1350"/>
+                <img src="21eb386a8d149f3fe796727e5e888b167c380ed2a8fd2892b7beb8b307f0dbf3.png" title=" Juan Camilo enters '471002' into the element (completed)" width="1350"/>
+                <img src="21eb386a8d149f3fe796727e5e888b167c380ed2a8fd2892b7beb8b307f0dbf3.png" title=" Juan Camilo enters '10df2f32286b7120MS00LTIwMDE3NA==30e0c83e6c29f1c3' into the element" width="1350"/>
+                <img src="ac98bf2c12cdbaa929be28af83a6a6c42c3a86da94a8e2867af48c675d19b97b.png" title=" Juan Camilo enters '10df2f32286b7120MS00LTIwMDE3NA==30e0c83e6c29f1c3' into the element (completed)" width="1350"/>
+                <img src="ac98bf2c12cdbaa929be28af83a6a6c42c3a86da94a8e2867af48c675d19b97b.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="37f63f3725d72c3bb4805a8279579ca0ae45eecb5f2ab00a747ebc4ac5c977c4.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="37f63f3725d72c3bb4805a8279579ca0ae45eecb5f2ab00a747ebc4ac5c977c4.png" title=" Juan camilo ingresar credenciales prueba sophos (completed)" width="1350"/>
+                <img src="37f63f3725d72c3bb4805a8279579ca0ae45eecb5f2ab00a747ebc4ac5c977c4.png" title=" Given Juan Camilo ingresa sus credenciales
+| user | password |
+| 471002 | 10df2f32286b7120MS00LTIwMDE3NA==30e0c83e6c29f1c3 | (completed)" width="1350"/>
+                <img src="37f63f3725d72c3bb4805a8279579ca0ae45eecb5f2ab00a747ebc4ac5c977c4.png" title=" When da click en el multiplo de seis y seleccionando la respuesta
+| respuesta |
+| -1301 |" width="1350"/>
+                <img src="37f63f3725d72c3bb4805a8279579ca0ae45eecb5f2ab00a747ebc4ac5c977c4.png" title=" Juan camilo ingresar ciclo uno prueba sophos" width="1350"/>
+                <img src="37f63f3725d72c3bb4805a8279579ca0ae45eecb5f2ab00a747ebc4ac5c977c4.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="da9409829602c2e2952e51576317aedc6c3191bf735289bab7a590076df6b38c.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="da9409829602c2e2952e51576317aedc6c3191bf735289bab7a590076df6b38c.png" title=" Juan Camilo selects -1301 on the element" width="1350"/>
+                <img src="4b77000499570c42cedf41a5431ec12d5bd4ce8a6c7122151b14f575896254da.png" title=" Juan Camilo selects -1301 on the element (completed)" width="1350"/>
+                <img src="4b77000499570c42cedf41a5431ec12d5bd4ce8a6c7122151b14f575896254da.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="e0d578502c49dcbdf59d4a18cb0e168ff74910e1d9cfb31405151f0b3a29d6f3.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="e0d578502c49dcbdf59d4a18cb0e168ff74910e1d9cfb31405151f0b3a29d6f3.png" title=" Juan camilo ingresar ciclo uno prueba sophos (completed)" width="1350"/>
+                <img src="e0d578502c49dcbdf59d4a18cb0e168ff74910e1d9cfb31405151f0b3a29d6f3.png" title=" When da click en el multiplo de seis y seleccionando la respuesta
+| respuesta |
+| -1301 | (completed)" width="1350"/>
+                <img src="e0d578502c49dcbdf59d4a18cb0e168ff74910e1d9cfb31405151f0b3a29d6f3.png" title=" When accede al ciclo dos ingresando la fecha
+| fecha |
+| 12102021 |" width="1350"/>
+                <img src="e0d578502c49dcbdf59d4a18cb0e168ff74910e1d9cfb31405151f0b3a29d6f3.png" title=" Juan camilo ingresar ciclo dos prueba sophos" width="1350"/>
+                <img src="e0d578502c49dcbdf59d4a18cb0e168ff74910e1d9cfb31405151f0b3a29d6f3.png" title=" Juan Camilo enters '07122022' into the element" width="1350"/>
+                <img src="ba381d25bd4ed76981c9d02a7ea52eb39db391719eac9ff0bd187f10d45c2c56.png" title=" Juan Camilo enters '07122022' into the element (completed)" width="1350"/>
+                <img src="ba381d25bd4ed76981c9d02a7ea52eb39db391719eac9ff0bd187f10d45c2c56.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="c3213f4bfb955bd2dbafe06bd9cd0128f7532a353ba486181614c0767be3712a.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="c3213f4bfb955bd2dbafe06bd9cd0128f7532a353ba486181614c0767be3712a.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="6be6f534a4de4b36e3eb31d0c8c01f1ffe618a9bc16738381a28e5a361b4d3c6.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="6be6f534a4de4b36e3eb31d0c8c01f1ffe618a9bc16738381a28e5a361b4d3c6.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="9facdc6e338861fba7c6404f0690f09428792b0d34abb26e9a92794def642c45.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="9facdc6e338861fba7c6404f0690f09428792b0d34abb26e9a92794def642c45.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="4231ff52e87fd5753c5b05bb6a74f6cd1215cab63c64921a9adf37fd1885187b.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="4231ff52e87fd5753c5b05bb6a74f6cd1215cab63c64921a9adf37fd1885187b.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="2d5bd41316676d09cba01e3e6fbcd993b1d91e866c98122e23cec593d6aeb447.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="2d5bd41316676d09cba01e3e6fbcd993b1d91e866c98122e23cec593d6aeb447.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="130a72301d76ac7ebcafb96ff461275ff2a3e8ca31f5a54ec3ee825ce3b38757.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="130a72301d76ac7ebcafb96ff461275ff2a3e8ca31f5a54ec3ee825ce3b38757.png" title=" Juan camilo ingresar ciclo dos prueba sophos (completed)" width="1350"/>
+                <img src="130a72301d76ac7ebcafb96ff461275ff2a3e8ca31f5a54ec3ee825ce3b38757.png" title=" When accede al ciclo dos ingresando la fecha
+| fecha |
+| 12102021 | (completed)" width="1350"/>
+                <img src="130a72301d76ac7ebcafb96ff461275ff2a3e8ca31f5a54ec3ee825ce3b38757.png" title=" When inicia el ciclo tres ingresando las respuestas
+| letra | numeroRespuesta |
+| r | 17 |" width="1350"/>
+                <img src="130a72301d76ac7ebcafb96ff461275ff2a3e8ca31f5a54ec3ee825ce3b38757.png" title=" Juan camilo ingresar ciclo tres prueba sophos" width="1350"/>
+                <img src="130a72301d76ac7ebcafb96ff461275ff2a3e8ca31f5a54ec3ee825ce3b38757.png" title=" Juan Camilo enters 'rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr' into the element" width="1350"/>
+                <img src="324c9ff91f148b5867c1cc8664ef6ca71fc3161c12dc9d17f3476a6597beb08a.png" title=" Juan Camilo enters 'rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr' into the element (completed)" width="1350"/>
+                <img src="324c9ff91f148b5867c1cc8664ef6ca71fc3161c12dc9d17f3476a6597beb08a.png" title=" Juan Camilo enters '17' into the element" width="1350"/>
+                <img src="b77055555f529b98f392decac943c0d813cacba193642cf6e392600308ead2b9.png" title=" Juan Camilo enters '17' into the element (completed)" width="1350"/>
+                <img src="b77055555f529b98f392decac943c0d813cacba193642cf6e392600308ead2b9.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="4f6544c52afd27eeb15e4588127f4f64e849bec2d74de4e6a17f0656860b9dbc.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="4f6544c52afd27eeb15e4588127f4f64e849bec2d74de4e6a17f0656860b9dbc.png" title=" Juan camilo ingresar ciclo tres prueba sophos (completed)" width="1350"/>
+                <img src="4f6544c52afd27eeb15e4588127f4f64e849bec2d74de4e6a17f0656860b9dbc.png" title=" When inicia el ciclo tres ingresando las respuestas
+| letra | numeroRespuesta |
+| r | 17 | (completed)" width="1350"/>
+                <img src="4f6544c52afd27eeb15e4588127f4f64e849bec2d74de4e6a17f0656860b9dbc.png" title=" When inicia el ciclo cuadro ingresando las respuestas
+| letraZ | numeroRespuestaDos |
+| Z | 14 |" width="1350"/>
+                <img src="4f6544c52afd27eeb15e4588127f4f64e849bec2d74de4e6a17f0656860b9dbc.png" title=" Juan camilo ingresar ciclo cuatro prueba sophos" width="1350"/>
+                <img src="4f6544c52afd27eeb15e4588127f4f64e849bec2d74de4e6a17f0656860b9dbc.png" title=" Juan Camilo enters 'ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ' into the element" width="1350"/>
+                <img src="a60db0e9ba8d640d219167afd97f5a80fb92c45cff204da62705aecf49a5289f.png" title=" Juan Camilo enters 'ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ' into the element (completed)" width="1350"/>
+                <img src="a60db0e9ba8d640d219167afd97f5a80fb92c45cff204da62705aecf49a5289f.png" title=" Juan Camilo enters '14' into the element" width="1350"/>
+                <img src="15702f101b6d5a593beaf57969e06d1551fda1fa2f2adcdb683af81241ba13b3.png" title=" Juan Camilo enters '14' into the element (completed)" width="1350"/>
+                <img src="15702f101b6d5a593beaf57969e06d1551fda1fa2f2adcdb683af81241ba13b3.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="3bfd094498548b1a7ab6ef842485dd2c951d4ffab1dd81619d9950f7413cd2f7.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="3bfd094498548b1a7ab6ef842485dd2c951d4ffab1dd81619d9950f7413cd2f7.png" title=" Juan camilo ingresar ciclo cuatro prueba sophos (completed)" width="1350"/>
+                <img src="3bfd094498548b1a7ab6ef842485dd2c951d4ffab1dd81619d9950f7413cd2f7.png" title=" When inicia el ciclo cuadro ingresando las respuestas
+| letraZ | numeroRespuestaDos |
+| Z | 14 | (completed)" width="1350"/>
+                <img src="3bfd094498548b1a7ab6ef842485dd2c951d4ffab1dd81619d9950f7413cd2f7.png" title=" When inicia el cinco cuadro ingresando las respuestas
+| selectCicloCinco | numeroSecuencia |
+| -61198 | 9 |" width="1350"/>
+                <img src="3bfd094498548b1a7ab6ef842485dd2c951d4ffab1dd81619d9950f7413cd2f7.png" title=" Juan camilo ingresar ciclo cinco prueba sophos" width="1350"/>
+                <img src="3bfd094498548b1a7ab6ef842485dd2c951d4ffab1dd81619d9950f7413cd2f7.png" title=" Juan Camilo enters '9' into the element" width="1350"/>
+                <img src="50ee92b4b997bdd6726a87e310f00a08095b5b61a3afa7623fbe5a3250c17c21.png" title=" Juan Camilo enters '9' into the element (completed)" width="1350"/>
+                <img src="50ee92b4b997bdd6726a87e310f00a08095b5b61a3afa7623fbe5a3250c17c21.png" title=" Juan Camilo selects -61198 on the element" width="1350"/>
+                <img src="23fb15ed1ec5400cd1e45bbcefd6e9fdfb1d0c5a59fead4556d84657da026728.png" title=" Juan Camilo selects -61198 on the element (completed)" width="1350"/>
+                <img src="23fb15ed1ec5400cd1e45bbcefd6e9fdfb1d0c5a59fead4556d84657da026728.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="5ae8e14c8cffc02f63aad7c8acafb6caa812e7b2d680d8e94aaa1ca436adb8a2.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="5ae8e14c8cffc02f63aad7c8acafb6caa812e7b2d680d8e94aaa1ca436adb8a2.png" title=" Juan camilo ingresar ciclo cinco prueba sophos (completed)" width="1350"/>
+                <img src="5ae8e14c8cffc02f63aad7c8acafb6caa812e7b2d680d8e94aaa1ca436adb8a2.png" title=" When inicia el cinco cuadro ingresando las respuestas
+| selectCicloCinco | numeroSecuencia |
+| -61198 | 9 | (completed)" width="1350"/>
+                <img src="5ae8e14c8cffc02f63aad7c8acafb6caa812e7b2d680d8e94aaa1ca436adb8a2.png" title=" When inicia el ciclo seis ingresando las respuestas
+| fecha |
+| 12102021 |" width="1350"/>
+                <img src="5ae8e14c8cffc02f63aad7c8acafb6caa812e7b2d680d8e94aaa1ca436adb8a2.png" title=" Juan camilo ingresar ciclo seis prueba sophos" width="1350"/>
+                <img src="5ae8e14c8cffc02f63aad7c8acafb6caa812e7b2d680d8e94aaa1ca436adb8a2.png" title=" Juan Camilo enters '20072022' into the element" width="1350"/>
+                <img src="46402ca800711a904dbdfb026a899d78168f3afee8bdba4b49923f3668071a00.png" title=" Juan Camilo enters '20072022' into the element (completed)" width="1350"/>
+                <img src="46402ca800711a904dbdfb026a899d78168f3afee8bdba4b49923f3668071a00.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="620aece058e60dcfa3b78ddb221e736a8bfaf561fca45f9e9c19de3fb3d0327e.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="620aece058e60dcfa3b78ddb221e736a8bfaf561fca45f9e9c19de3fb3d0327e.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="9370792034c8c247723f362f39bc818fe3b71e8affda86c1256d459f0fe7d793.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="9370792034c8c247723f362f39bc818fe3b71e8affda86c1256d459f0fe7d793.png" title=" Juan camilo ingresar ciclo seis prueba sophos (completed)" width="1350"/>
+                <img src="9370792034c8c247723f362f39bc818fe3b71e8affda86c1256d459f0fe7d793.png" title=" When inicia el ciclo seis ingresando las respuestas
+| fecha |
+| 12102021 | (completed)" width="1350"/>
+                <img src="9370792034c8c247723f362f39bc818fe3b71e8affda86c1256d459f0fe7d793.png" title=" When ingresa la informacion en el ciclo siete
+| fecha |
+| 12102021 |" width="1350"/>
+                <img src="9370792034c8c247723f362f39bc818fe3b71e8affda86c1256d459f0fe7d793.png" title=" Juan camilo ingresar ciclo siete prueba sophos" width="1350"/>
+                <img src="9370792034c8c247723f362f39bc818fe3b71e8affda86c1256d459f0fe7d793.png" title=" Juan Camilo enters '26012023' into the element" width="1350"/>
+                <img src="a2d7fa014eb44160ac5428e89952bc0045c45c256ea9b1be776daf3919c188a5.png" title=" Juan Camilo enters '26012023' into the element (completed)" width="1350"/>
+                <img src="a2d7fa014eb44160ac5428e89952bc0045c45c256ea9b1be776daf3919c188a5.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="3278e5101941cd54ead93451c7259fe2daaa3ed690d1f17b59c54898782e941b.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="3278e5101941cd54ead93451c7259fe2daaa3ed690d1f17b59c54898782e941b.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="95d7fc826363b69bf94330a2657cb639657e3ffd37cd1184c73c23cf7b4882fd.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="95d7fc826363b69bf94330a2657cb639657e3ffd37cd1184c73c23cf7b4882fd.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="3a7b1132e0215ed3eb7770d7dd773ae445e90f9856973bb132686c39d5d641b3.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="3a7b1132e0215ed3eb7770d7dd773ae445e90f9856973bb132686c39d5d641b3.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="f328f3447aa75aa27ceb4e36483296ed409e0c458ea91b42a0191cde762264b0.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="f328f3447aa75aa27ceb4e36483296ed409e0c458ea91b42a0191cde762264b0.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="d7b2435d65b773edbd9266ba96b33a464c14e8916b65f4e21603f67580cac4f8.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="d7b2435d65b773edbd9266ba96b33a464c14e8916b65f4e21603f67580cac4f8.png" title=" Juan camilo ingresar ciclo siete prueba sophos (completed)" width="1350"/>
+                <img src="d7b2435d65b773edbd9266ba96b33a464c14e8916b65f4e21603f67580cac4f8.png" title=" When ingresa la informacion en el ciclo siete
+| fecha |
+| 12102021 | (completed)" width="1350"/>
+                <img src="d7b2435d65b773edbd9266ba96b33a464c14e8916b65f4e21603f67580cac4f8.png" title=" When ingresa la letra y la respuesta correspondiente al ciclo ocho
+| letraM |
+| M |" width="1350"/>
+                <img src="d7b2435d65b773edbd9266ba96b33a464c14e8916b65f4e21603f67580cac4f8.png" title=" Juan camilo ingresar ciclo ocho prueba sophos" width="1350"/>
+                <img src="d7b2435d65b773edbd9266ba96b33a464c14e8916b65f4e21603f67580cac4f8.png" title=" Juan Camilo enters 'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM' into the element" width="1350"/>
+                <img src="40d99038bb2642a3c230288b85e1a585d482cee676b1da90bd75ca5ccebda299.png" title=" Juan Camilo enters 'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM' into the element (completed)" width="1350"/>
+                <img src="40d99038bb2642a3c230288b85e1a585d482cee676b1da90bd75ca5ccebda299.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="f7f13b0c7d624eafb626775b0b37733b20b19dfb1eb34592ba84914d252e1e09.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="f7f13b0c7d624eafb626775b0b37733b20b19dfb1eb34592ba84914d252e1e09.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="64e97db09e96ff444aa381f894c88a037a115d490d920b153a83a2756f891a88.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="64e97db09e96ff444aa381f894c88a037a115d490d920b153a83a2756f891a88.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="d506c7209c0975f3470b7056d5140d0b358d9d6c22a879adc56c28518517b3cb.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="d506c7209c0975f3470b7056d5140d0b358d9d6c22a879adc56c28518517b3cb.png" title=" Juan camilo ingresar ciclo ocho prueba sophos (completed)" width="1350"/>
+                <img src="d506c7209c0975f3470b7056d5140d0b358d9d6c22a879adc56c28518517b3cb.png" title=" When ingresa la letra y la respuesta correspondiente al ciclo ocho
+| letraM |
+| M | (completed)" width="1350"/>
+                <img src="d506c7209c0975f3470b7056d5140d0b358d9d6c22a879adc56c28518517b3cb.png" title=" When responde los retos del ciclo nueve
+| fecha |
+| 12102021 |" width="1350"/>
+                <img src="d506c7209c0975f3470b7056d5140d0b358d9d6c22a879adc56c28518517b3cb.png" title=" Juan camilo ingresar ciclo nueve prueba sophos" width="1350"/>
+                <img src="d506c7209c0975f3470b7056d5140d0b358d9d6c22a879adc56c28518517b3cb.png" title=" Juan Camilo enters '07012023' into the element" width="1350"/>
+                <img src="948706b3d8315f155f7775d75a3859ca6df228f67ea8e60c8807bddebb4c11fa.png" title=" Juan Camilo enters '07012023' into the element (completed)" width="1350"/>
+                <img src="948706b3d8315f155f7775d75a3859ca6df228f67ea8e60c8807bddebb4c11fa.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="9750bb5c94f14c0f19feb686253e6a3e1e1f33f634908d648f1e2d177820c5d0.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="9750bb5c94f14c0f19feb686253e6a3e1e1f33f634908d648f1e2d177820c5d0.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="c2160a6ab229afb1d729269d95f7e5285640bad67e9dbda959c67561b66ae71a.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="c2160a6ab229afb1d729269d95f7e5285640bad67e9dbda959c67561b66ae71a.png" title=" Juan camilo ingresar ciclo nueve prueba sophos (completed)" width="1350"/>
+                <img src="c2160a6ab229afb1d729269d95f7e5285640bad67e9dbda959c67561b66ae71a.png" title=" When responde los retos del ciclo nueve
+| fecha |
+| 12102021 | (completed)" width="1350"/>
+                <img src="c2160a6ab229afb1d729269d95f7e5285640bad67e9dbda959c67561b66ae71a.png" title=" When ingresa la letra en el ciclo diez
+| letraV |
+| V |" width="1350"/>
+                <img src="c2160a6ab229afb1d729269d95f7e5285640bad67e9dbda959c67561b66ae71a.png" title=" Juan camilo ingresar ciclo diez prueba sophos" width="1350"/>
+                <img src="c2160a6ab229afb1d729269d95f7e5285640bad67e9dbda959c67561b66ae71a.png" title=" Juan Camilo enters 'VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV' into the element" width="1350"/>
+                <img src="30ce273419729bca63a9cd14190fea82804b5fb814593fb2c44d259b6dc4e579.png" title=" Juan Camilo enters 'VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV' into the element (completed)" width="1350"/>
+                <img src="30ce273419729bca63a9cd14190fea82804b5fb814593fb2c44d259b6dc4e579.png" title=" Juan Camilo clicks on the element" width="1350"/>
+                <img src="4b30d9948e61c7620cdb2fb3918c1ae39478caec1b755a61369c6286117212d1.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
+                <img src="4b30d9948e61c7620cdb2fb3918c1ae39478caec1b755a61369c6286117212d1.png" title=" Juan camilo ingresar ciclo diez prueba sophos (completed)" width="1350"/>
+                <img src="4b30d9948e61c7620cdb2fb3918c1ae39478caec1b755a61369c6286117212d1.png" title=" When ingresa la letra en el ciclo diez
+| letraV |
+| V | (completed)" width="1350"/>
+                <img src="4b30d9948e61c7620cdb2fb3918c1ae39478caec1b755a61369c6286117212d1.png" title=" Then Visualiza el mensaje de Felicidades, has terminado la prueba exitosamente" width="1350"/>
+                <img src="4b30d9948e61c7620cdb2fb3918c1ae39478caec1b755a61369c6286117212d1.png" title=" Then validar texto prueba sophos" width="1350"/>
+                <img src="4b30d9948e61c7620cdb2fb3918c1ae39478caec1b755a61369c6286117212d1.png" title=" 1: Automatizar el escenario propuesto para la prueba tecnica ({user=471002, password=10df2f32286b7120MS00LTIwMDE3NA==30e0c83e6c29f1c3, respuesta=-1301, fecha=12102021, letra=r, numeroRespuesta=17, letraZ=Z, numeroRespuestaDos=14, selectCicloCinco=-61198, numeroSecuencia=9, letraM=M, letraV=V}) (completed): <span class='success-color'>SUCCESS</span>" width="1350"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.2</span>
+</div>
+</body>
+</html>
