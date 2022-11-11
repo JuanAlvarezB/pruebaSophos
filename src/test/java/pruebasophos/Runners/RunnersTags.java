@@ -10,8 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/Feature",
         glue = {"pruebasophos/Definitions"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
-        dryRun = false
+        snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class RunnersTags {
 }
